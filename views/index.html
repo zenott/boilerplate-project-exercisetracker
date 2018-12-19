@@ -5,31 +5,44 @@
       <title>Exercise Tracker | Free Code Camp</title>
       <link rel="shortcut icon" href="https://cdn.hyperdev.com/us-east-1%3A52a203ff-088b-420f-81be-45bf559d01b1%2Ffavicon.ico" type="image/x-icon"/>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
    </head>
 
    <body>
       <div class="container">
-         <h1>Exercise tracker</h1>
-          <form action="/api/exercise/new-user" method="post">
-            <h3>Create a New User</h3>
-            <p><code>POST /api/exercise/new-user</code></p>
-            <input id="uname" type="text" name="username" placeholder="username">
-            <input type="submit" value="Submit">
-          </form>
-          <form action="/api/exercise/add" method="post">
-            <h3>Add exercises</h3>
-            <p><code>POST /api/exercise/add</code></p>
-            <input id="uid" type="text" name="userId" placeholder="userId*">
-            <input id="desc" type="text" name="description" placeholder="description*">
-            <input id="dur" type="text" name="duration" placeholder="duration* (mins.)">
-            <input id="dat" type="text" name="date" placeholder="date (yyyy-mm-dd)">
-            <input type="submit" value="Submit">
-          </form>
-          <p><strong>GET users's exercise log: </strong><code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code></p>
-          <p><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
-          <p><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+        <h1 class="text-center display-4 my-5">Exercise tracker</h1>
+        <div class="row justify-content-center mb-5">
+         <div class="col-4 border rounded p-4 mr-5 d-flex flex-column justify-content-between">
+           <div class="text-center">
+             <h3 class="mb-3">Create a New User</h3>
+             <p><code>POST /api/exercise/new-user</code></p>
+           </div>
+           <form action="/api/exercise/new-user" method="post">
+             <input id="uname" name="username" class="form-control form-group" type="text" placeholder="username">
+             <input type="submit" class="btn btn-primary btn-block" value="Submit">
+           </form>
+         </div>
+         <div class="col-4 border rounded p-4">
+           <div class="text-center">
+             <h3 class="mb-3">Add exercises</h3>
+             <p><code>POST /api/exercise/add</code></p>
+           </div>
+           <form action="/api/exercise/add" method="post">
+             <input id="uid" name="userId" class="form-control form-group" type="text" placeholder="userId*">
+             <input id="desc" name="description" class="form-control form-group" type="text" placeholder="description*">
+             <input id="dur" name="duration" class="form-control form-group" type="text" placeholder="duration* (mins.)">
+             <input id="dat" name="date" class="form-control form-group" type="text" placeholder="date (yyyy-mm-dd)">
+             <input type="submit" class="btn btn-primary btn-block" value="Submit">
+           </form>
+        </div>
       </div>
+          <p class="text-center"><strong>GET users's exercise log: </strong><code>GET /api/exercise/log?{userId}[&amp;from][&amp;to][&amp;limit]</code></p>
+          <p class="text-center"><strong>{ }</strong> = required, <strong>[ ]</strong> = optional</p>
+          <p class="text-center"><strong>from, to</strong> = dates (yyyy-mm-dd); <strong>limit</strong> = number</p>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
    </body>
 
 </html>
