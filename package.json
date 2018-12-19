@@ -18,12 +18,11 @@
 		"node": "10.x"
 	},
 	"repository": {
-		"url": "https://gomix.com/#!/project/welcome-project"
+		"url": "https://github.com/zenott/exercise-tracker-microservice"
 	},
 	"license": "MIT",
 	"keywords": [
 		"node",
-		"gomix",
 		"express"
 	]
 }
